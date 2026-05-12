@@ -1243,19 +1243,19 @@
 <!-- ═══ SCRIPTS ══════════════════════════════════════════════════════ -->
 <script>
   // ─── CONFIG ────────────────────────────────────────────────────────
-  const SITE_NAME = "Farmer";
+  const SITE_NAME = "Avuzwa Ntshoza";
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 
   // ─── PRODUCT DATA ───────────────────────────────────────────────────
   const PRODUCTS = [
-    { id: 1, name: "Karoo Morning", category: "oil", price: 3200, badge: "original", desc: "Oil on canvas — the stillness before dawn on a Karoo plain.", grad: "ap-1" },
-    { id: 2, name: "After the Rain", category: "watercolour", price: 1800, badge: "new", desc: "Watercolour on paper — the smell of wet red earth.", grad: "ap-2" },
-    { id: 3, name: "Harvest Season", category: "print", price: 650, badge: null, desc: "Archival fine art print — golden wheat fields at dusk.", grad: "ap-3" },
-    { id: 4, name: "Old Barn", category: "oil", price: 4100, badge: "original", desc: "Oil on linen — weathered wood, long shadows, quiet dignity.", grad: "ap-4" },
-    { id: 5, name: "Woven Veld", category: "textile", price: 2200, badge: null, desc: "Hand-woven natural fibres dyed with field plants.", grad: "ap-5" },
-    { id: 6, name: "Sky River", category: "watercolour", price: 1400, badge: "new", desc: "Watercolour diptych — where the sky meets a dry riverbed.", grad: "ap-6" },
-    { id: 7, name: "First Plough", category: "print", price: 750, badge: null, desc: "Limited edition etching print — the first furrow of spring.", grad: "ap-1" },
-    { id: 8, name: "Purple Hills", category: "oil", price: 3800, badge: "original", desc: "Oil on canvas — the Swartberg mountains at twilight.", grad: "ap-2" },
+    { id: 1, name: "Karoo Morning", category: "oil", price: 3200, badge: "original", desc: "Oil on canvas — the stillness before dawn on a Karoo plain.", image: "images/IMG-20260510-WA0001.jpg" },
+    { id: 2, name: "After the Rain", category: "watercolour", price: 1800, badge: "new", desc: "Watercolour on paper — the smell of wet red earth.", image: "images/IMG-20260510-WA0002.jpg" },
+    { id: 3, name: "Harvest Season", category: "print", price: 650, badge: null, desc: "Archival fine art print — golden wheat fields at dusk.", image: "images/IMG-20260510-WA0003.jpg" },
+    { id: 4, name: "Old Barn", category: "oil", price: 4100, badge: "original", desc: "Oil on linen — weathered wood, long shadows, quiet dignity.", image: "images/IMG-20260510-WA0004.jpg" },
+    { id: 5, name: "Woven Veld", category: "textile", price: 2200, badge: null, desc: "Hand-woven natural fibres dyed with field plants.", image: "images/IMG-20260510-WA0005.jpg" },
+    { id: 6, name: "Sky River", category: "watercolour", price: 1400, badge: "new", desc: "Watercolour diptych — where the sky meets a dry riverbed.", image: "images/IMG-20260510-WA0006.jpg" },
+    { id: 7, name: "First Plough", category: "print", price: 750, badge: null, desc: "Limited edition etching print — the first furrow of spring.", image: "images/IMG-20260510-WA0007.jpg" },
+    { id: 8, name: "Purple Hills", category: "oil", price: 3800, badge: "original", desc: "Oil on canvas — the Swartberg mountains at twilight.", image: "images/IMG-20260510-WA0008.jpg" },
   ];
 
   // ─── CART STATE ─────────────────────────────────────────────────────
@@ -1291,8 +1291,7 @@
       <div class="product-card" data-cat="${p.category}">
         <div class="product-img-wrap">
           <div class="art-placeholder ${p.grad}" style="height:100%;position:relative;">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;">
-              <rect width="320" height="240" fill="transparent"/>
+              <img src="images/${p.image} object-fit: cover;">
               <text x="160" y="125" text-anchor="middle" font-family="Playfair Display,serif" font-size="16" fill="rgba(255,255,255,0.55)" font-style="italic">${p.name}</text>
               <text x="160" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" letter-spacing="2">${p.category.toUpperCase()}</text>
             </svg>
