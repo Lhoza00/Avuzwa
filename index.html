@@ -772,7 +772,7 @@
     </div>
     <nav>
       <span class="nav-link active" onclick="showPage('home')">Home</span>
-      <a href="index.html#artist"></a><span class="nav-link" onclick="showPage('artist')">Artist</span></a>
+      <a href="index.html#about-artist"></a><span class="nav-link"">Artist</span></a>
       <span class="nav-link" onclick="showPage('shop')">Shop</span>
     </nav>
     <div class="header-actions">
@@ -787,7 +787,7 @@
   </div>
   <div class="mobile-nav" id="mobileNav">
     <span class="nav-link" onclick="showPage('home'); closeMobileNav()">Home</span>
-    <span class="nav-link" onclick="showPage('artist'); closeMobileNav()">Artist</span>
+    <a href="index.html#about-artist"><span class="nav-link" onclick="closeMobileNav()">Artist</span></a>
     <span class="nav-link" onclick="showPage('shop'); closeMobileNav()">Shop</span>
     <span class="nav-link" onclick="showPage('cart'); closeMobileNav()">Cart</span>
   </div>
@@ -806,7 +806,7 @@
           <p class="hero-desc">Each piece carries the spirit of the land — painted in open fields, inspired by seasons, soil, and the quiet beauty of farm life.</p>
           <div class="hero-actions">
             <button class="btn-primary" onclick="showPage('shop')">Explore the Gallery →</button>
-            <button class="btn-outline" onclick="showPage('artist')">Meet the Artist</button>
+            <a href="index.html#artist"><button class="btn-outline"">Meet the Artist</button></a>
           </div>
           <div class="hero-stats">
             <div>
@@ -922,14 +922,14 @@
   </section>
 
   <!-- ABOUT BANNER -->
-  <section id='artist' class="page about-banner">
+  <section id='about-artist' class="about-banner">
     <div class="container">
       <div class="about-banner-inner">
         <div>
           <span class="section-label" style="color:var(--purple-light)">The maker behind the art</span>
           <h2>A lifetime in the fields, <em>a canvas in hand</em></h2>
           <p>Every brushstroke carries the weight of the earth, the smell of rain on dry ground, and the quiet pride of rural craftsmanship. This isn't gallery art — it's lived-in, breathed-in, farm-born art.</p>
-          <button class="btn-outline" onclick="showPage('about-artist')">Read the Full Story</button>
+          <button class="btn-outline" onclick="showPage('artist')">Read the Full Story</button>
         </div>
         <div class="banner-img-wrap">
           <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
@@ -1039,7 +1039,7 @@
 </div><!-- end shop -->
 
 <!-- ═══ ARTIST PAGE ═══════════════════════════════════════════════════ -->
-<div id="about-artist" class="page">
+<div id="artist" class="page">
 
   <section class="artist-hero">
     <div class="container">
@@ -1158,7 +1158,7 @@ Buy art and save lives.</p>
         <ul>
           <li><a href="#" onclick="showPage('home')">Home</a></li>
           <li><a href="#" onclick="showPage('shop')">Shop All</a></li>
-          <li><a href="#" onclick="showPage('artist')">The Artist</a></li>
+          <li><a href="index.html#about-artist" ">The Artist</a></li>
           <li><a href="#" onclick="showPage('cart')">Cart</a></li>
         </ul>
       </div>
