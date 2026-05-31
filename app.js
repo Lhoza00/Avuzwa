@@ -18,18 +18,6 @@
 
   let cart = [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
-
-  // ─── PAGE NAVIGATION ────────────────────────────────────────────────
-  function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    document.querySelectorAll('.nav-link').forEach(l => {
-      l.classList.toggle('active', l.textContent.trim().toLowerCase() === pageId || (pageId === 'shop' && l.textContent.trim() === 'Shop'));
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    console.log(`[Nav] Navigated to: ${pageId}`);
-    if (pageId === 'cart') renderCart();
-  }
 document.querySelector("#hamburger")
   .addEventListener("click", toggleMobileNav);
   // ─── MOBILE NAV ─────────────────────────────────────────────────────
@@ -57,12 +45,16 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button>
+            <button class="add-cart-btn" data-id="${p.id}">
           </div>
         </div>
       </div>`;
   }
-
+document.querySelectorAll('.add-cart-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    addToCart(Number(btn.dataset.id));
+  });
+});
   // ─── RENDER GRIDS ───────────────────────────────────────────────────
   function renderHomeGrid() {
   const grid = document.getElementById('productsGrid');
