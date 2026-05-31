@@ -45,15 +45,15 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <button class="add-cart-btn" data-id="${p.id}">Add to Cart<button>
+            <button class="add-cart-btn" data-id="${p.id}">Add to Cart</button>
           </div>
         </div>
       </div>`;
   }
-document.querySelectorAll('.add-cart-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    addToCart(Number(btn.dataset.id));
-  });
+// ─── CART BUTTON DELEGATION ─────────────────────────────────────────
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.add-cart-btn');
+  if (btn) addToCart(Number(btn.dataset.id));
 });
   // ─── RENDER GRIDS ───────────────────────────────────────────────────
   function renderHomeGrid() {
@@ -143,7 +143,7 @@ document.querySelectorAll('.add-cart-btn').forEach(btn => {
       <div class="cart-item">
         <div class="cart-item-img">
           <div class="art-placeholder" style="height:100%;position:relative;">
-              <img src="${i.image}" alt="${i.name}" style="width:100%; height:100%; object-fit:cover; display:block;" />
+              <img src="images/${i.id}.jpg" alt="${i.name}" style="width:100%; height:100%; object-fit:cover; display:block;" />
           </div>
         </div>
         <div>
