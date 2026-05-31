@@ -10,13 +10,14 @@
     }
 
     const data = await res.json();
-    result = [data.products];
-    return result;
+    return data.products;
   } catch (err) {
     console.error("Fetch failed:", err);
   }
 }
- let PRODUCTS = loadProducts();
+ let temp = loadProducts();
+console.log(temp);
+const PRODUCTS = [temp];
 console.log(PRODUCTS);
 async function init() {
   const result = await loadProducts();
