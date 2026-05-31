@@ -1,6 +1,5 @@
   // ─── CONFIG ────────────────────────────────────────────────────────
-  const SITE_NAME = "Avuzwa";
-  let PRODUCTS = [loadProducts()]; 
+  const SITE_NAME = "Avuzwa"; 
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
@@ -16,7 +15,7 @@
     console.error("Fetch failed:", err);
   }
 }
-
+ let PRODUCTS = [loadProducts()];
 async function init() {
   const result = await loadProducts();
 
