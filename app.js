@@ -350,14 +350,9 @@
   }
   async function init() {
   const result = await loadProducts();
-
-  console.log(result); // full object
-  console.log(result.products); // array
  // render cards
   document.getElementById("productsGrid").innerHTML =
     result.map(renderCard).join('');
-  const names = result.products.map(p => p.name);
-  console.log(names);
 }
 
 init();
