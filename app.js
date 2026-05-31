@@ -108,13 +108,25 @@
     }
 
     const data = await res.json();
-    return data;
+    return {
+    products: data
+  };
   } catch (err) {
     console.error("Fetch failed:", err);
   }
 }
 
-console.log(loadProducts());
+async function init() {
+  const result = await loadProducts();
+
+  console.log(result); // full object
+  console.log(result.products); // array
+
+  const names = result.products.map(p => p.name);
+  console.log(names);
+}
+
+init();
   let cart = [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 
