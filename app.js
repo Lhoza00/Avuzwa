@@ -20,7 +20,7 @@ async function init() {
 
   console.log(result); // full object
   console.log(result.products); // array
-  products.map(p => renderCard(p));
+  result.map(p => renderCard(p));
   const names = result.products.map(p => p.name);
   console.log(names);
 }
