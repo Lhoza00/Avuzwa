@@ -108,13 +108,13 @@
     }
 
     const data = await res.json();
-    console.log(data);
+    return data.products;
   } catch (err) {
     console.error("Fetch failed:", err);
   }
 }
 
-loadProducts();
+console.log(loadProducts());
   let cart = [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 
