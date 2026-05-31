@@ -161,9 +161,9 @@ class SpecialFooter extends HTMLElement {
                     </div>
                     <p>Handcrafted rural art made on a working farm in South Africa. Each piece carries the soul of the countryside.</p>
                     <div class="social-links">
-                    <a class="social-link" href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="social-link" href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="social-link" href="#" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/eslice_eskhulu" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.facebook.com/avuziwearnesto.ntshoza" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <!--a class="social-link" href="#" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a-->
                     </div>
                 </div>
                 <div class="footer-col">
