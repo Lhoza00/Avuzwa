@@ -108,7 +108,7 @@
     }
 
     const data = await res.json();
-    return data;
+    return data.products;
   } catch (err) {
     console.error("Fetch failed:", err);
   }
