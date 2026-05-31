@@ -19,10 +19,10 @@ class SpecialHeader extends HTMLElement {
 
                 <div class="header-actions">
 
-                    <button class="cart-btn">
+                    <a href="cart.html><button class="cart-btn">
                         <span>🛒 Buy Art</span>
                         <span class="cart-count hidden" id="cartCount">0</span>
-                    </button>
+                    </button></a>
 
                     <button class="hamburger" id="hamburger">
                         <span></span>
@@ -37,7 +37,7 @@ class SpecialHeader extends HTMLElement {
                 <a class="nav-link active" href="#heroSection">Home</a>
                 <a class="nav-link" href="#about-artist">Artist</a>
                 <a class="nav-link" href="#productsGrid">Shop</a>
-                <span class="nav-link">Cart</span>
+                <a href="cart.html class="nav-link">Cart</a>
             </div>
         </header>
         `;
