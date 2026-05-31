@@ -15,16 +15,12 @@
     console.error("Fetch failed:", err);
   }
 }
- let temp = await loadProducts();
-console.log(temp);
-const PRODUCTS = [temp];
-console.log(PRODUCTS);
 async function init() {
   const result = await loadProducts();
 
   console.log(result); // full object
   console.log(result.products); // array
-
+  products.map(p => renderCard(p));
   const names = result.products.map(p => p.name);
   console.log(names);
 }
