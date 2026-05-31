@@ -45,7 +45,7 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <button class="add-cart-btn" data-id="${p.id}">Add to Cart</button>
+            <button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button>
           </div>
         </div>
       </div>`;
@@ -73,7 +73,14 @@ document.addEventListener('click', e => {
 
   grid.innerHTML = filtered.map(renderCard).join('');
 }
+async function init() {
+  const result = await loadProducts();
+ // render cards
+  document.getElementById("productsGrid").innerHTML =
+    result.map(renderCard).join('');
+}
 
+init();
   // ─── FILTER ─────────────────────────────────────────────────────────
   function filterProducts(cat, btn) {
     document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
@@ -91,8 +98,8 @@ document.addEventListener('click', e => {
   }
 
   // ─── CART LOGIC ─────────────────────────────────────────────────────
-  function addToCart(id) {
-    const p = PRODUCTS.find(x => x.id === id);
+  async function addToCart(id) {
+    const p = await loadProducts();.find(x => x.id === id);
     if (!p) return;
     const existing = cart.find(i => i.id === id);
     if (existing) {
@@ -341,13 +348,6 @@ document.addEventListener('click', e => {
     e.target.reset();
     console.log('[Newsletter] Subscribed');
   }
-  async function init() {
-  const result = await loadProducts();
- // render cards
-  document.getElementById("productsGrid").innerHTML =
-    result.map(renderCard).join('');
-}
-
-init();
+  
   
   console.log(`[Init] ${SITE_NAME} website loaded`);
