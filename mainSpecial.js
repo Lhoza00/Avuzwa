@@ -41,8 +41,6 @@ class SpecialHeader extends HTMLElement {
             </div>
         </header>
         `;
-       document.querySelector("#hamburger")
-  .addEventListener("click", toggleMobileNav);
     }
 }
 class SpecialHeroSection extends HTMLElement {
