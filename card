@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="images/bread-slice-solid-full.svg">
+  <title>Avuzwa Ntshoza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="mainSpecial.js"></script><script src="app.js" defer></script>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════════ -->
+<special-header></special-header>
+<!-- ═══ CART PAGE ════════════════════════════════════════════════════ -->
+<div id="cart" class="page">
+  <div class="container cart-page">
+    <h1>Your Cart</h1>
+    <p class="sub" id="cartSubtitle">Review your chosen pieces before checkout.</p>
+    <div class="cart-layout" id="cartLayout">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</div><!-- end cart -->
+<!-- ═══ CHECKOUT MODAL ════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="checkoutModal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modalTitle">Checkout</h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="checkoutContent">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</div>
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════════ -->
+<special-footer></special-footer>
+
+<!-- ═══ TOAST ════════════════════════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+</body>
+</html>
