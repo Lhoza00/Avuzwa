@@ -15,17 +15,7 @@
     console.error("Fetch failed:", err);
   }
 }
-async function init() {
-  const result = await loadProducts();
 
-  console.log(result); // full object
-  console.log(result.products); // array
-  result.map(p => renderCard(p));
-  const names = result.products.map(p => p.name);
-  console.log(names);
-}
-
-init();
   let cart = [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 
@@ -358,8 +348,18 @@ init();
     e.target.reset();
     console.log('[Newsletter] Subscribed');
   }
+  async function init() {
+  const result = await loadProducts();
 
-  // ─── INIT ────────────────────────────────────────────────────────────
+  console.log(result); // full object
+  console.log(result.products); // array
+ // render cards
   document.getElementById("productsGrid").innerHTML =
-  PRODUCTS.map(renderCard).join('');
+    result.map(renderCard).join('');
+  const names = result.products.map(p => p.name);
+  console.log(names);
+}
+
+init();
+  
   console.log(`[Init] ${SITE_NAME} website loaded`);
