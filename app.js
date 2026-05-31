@@ -45,7 +45,7 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <button class="add-cart-btn" data-id="${p.id}">
+            <button class="add-cart-btn" data-id="${p.id}">Add to Cart<button>
           </div>
         </div>
       </div>`;
