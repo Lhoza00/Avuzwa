@@ -1,6 +1,6 @@
   // ─── CONFIG ────────────────────────────────────────────────────────
   const SITE_NAME = "Avuzwa";
-  let PRODUCTS = await loadProducts(); 
+  let PRODUCTS = [loadProducts()]; 
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
