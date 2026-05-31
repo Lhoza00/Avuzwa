@@ -15,7 +15,7 @@
     console.error("Fetch failed:", err);
   }
 }
- let temp = loadProducts();
+ let temp = await loadProducts();
 console.log(temp);
 const PRODUCTS = [temp];
 console.log(PRODUCTS);
