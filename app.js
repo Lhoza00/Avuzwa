@@ -30,7 +30,8 @@
     console.log(`[Nav] Navigated to: ${pageId}`);
     if (pageId === 'cart') renderCart();
   }
-
+document.querySelector("#hamburger")
+  .addEventListener("click", toggleMobileNav);
   // ─── MOBILE NAV ─────────────────────────────────────────────────────
   function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
   function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
