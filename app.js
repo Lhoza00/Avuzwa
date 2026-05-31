@@ -73,14 +73,7 @@ document.addEventListener('click', e => {
 
   grid.innerHTML = filtered.map(renderCard).join('');
 }
-async function init() {
-  const result = await loadProducts();
- // render cards
-  document.getElementById("productsGrid").innerHTML =
-    result.map(renderCard).join('');
-}
 
-init();
   // ─── FILTER ─────────────────────────────────────────────────────────
   function filterProducts(cat, btn) {
     document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
@@ -349,5 +342,12 @@ init();
     console.log('[Newsletter] Subscribed');
   }
   
-  
+  async function init() {
+  const result = await loadProducts();
+ // render cards
+  document.getElementById("productsGrid").innerHTML =
+    result.map(renderCard).join('');
+}
+
+init();
   console.log(`[Init] ${SITE_NAME} website loaded`);
