@@ -201,8 +201,8 @@ document.addEventListener('click', e => {
   }
 
   // ─── CART LOGIC ─────────────────────────────────────────────────────
-  async function addToCart(id) {
-    const p = await PRODUCTS.find(x => x.id === id);
+  function addToCart(id) {
+    const p = PRODUCTS.find(x => x.id === id);
     if (!p) return;
     const existing = cart.find(i => i.id === id);
     if (existing) {
