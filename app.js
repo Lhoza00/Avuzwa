@@ -2,7 +2,7 @@
   const SITE_NAME = "Avuzwa"; 
   async function loadProducts() {
   try {
-    const res = await fetch('./products.json');
+    const res = await fetch('products.json');
 
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
@@ -10,6 +10,7 @@
     }
 
     const data = await res.json();
+    console.log(data.products);
     return data.products;
   } catch (err) {
     console.error("Fetch failed:", err);
