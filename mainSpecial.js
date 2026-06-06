@@ -6,15 +6,15 @@ class SpecialHeader extends HTMLElement {
         <header id="mainHeader">
             <div class="header-inner">
 
-                <a class="logo" href="#heroSection">
+                <a class="logo" href="index.html#heroSection">
                     <i class="fa-solid fa-bread-slice"></i>
                     <span>${siteName}</span>
                 </a>
 
                 <nav>
-                    <a class="nav-link active" href="#heroSection">Home</a>
-                    <a class="nav-link" href="#about-artist">Artist</a>
-                    <a class="nav-link" href="#productsGrid">Shop</a>
+                    <a class="nav-link active" href="index.html#heroSection">Home</a>
+                    <a class="nav-link" href="index.html#about-artist">Artist</a>
+                    <a class="nav-link" href="index.html#productsGrid">Shop</a>
                 </nav>
 
                 <div class="header-actions">
@@ -34,9 +34,9 @@ class SpecialHeader extends HTMLElement {
             </div>
 
             <div class="mobile-nav" id="mobileNav">
-                <a class="nav-link active" href="#heroSection">Home</a>
-                <a class="nav-link" href="#about-artist">Artist</a>
-                <a class="nav-link" href="#productsGrid">Shop</a>
+                <a class="nav-link active" href="index.html#heroSection">Home</a>
+                <a class="nav-link" href="index.html#about-artist">Artist</a>
+                <a class="nav-link" href="index.html#productsGrid">Shop</a>
                 <a href="cart.html class="nav-link">Cart</a>
             </div>
         </header>
@@ -155,10 +155,10 @@ class SpecialFooter extends HTMLElement {
             <div class="container">
                 <div class="footer-inner">
                 <div class="footer-brand">
-                    <div class="logo" onclick="showPage('home')">
+                    <a href="index.html" class="logo">
                     <i class="fa-solid fa-bread-slice"></i>
                     <span>${siteName}</span>
-                    </div>
+                    </a>
                     <p>Handcrafted rural art made on a working farm in South Africa. Each piece carries the soul of the countryside.</p>
                     <div class="social-links">
                     <a class="social-link" target="_blank href="https://www.instagram.com/eslice_eskhulu" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -169,10 +169,10 @@ class SpecialFooter extends HTMLElement {
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                    <li><a href="#heroSection">Home</a></li>
-                    <li><a href="#productsGrid">Shop All</a></li>
-                    <li><a href="#about-artist" ">The Artist</a></li>
-                    <li><a href="#" onclick="showPage('cart')">Cart</a></li>
+                    <li><a href="index.html#heroSection">Home</a></li>
+                    <li><a href="index.html#productsGrid">Shop All</a></li>
+                    <li><a href="index.html#about-artist" ">The Artist</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
