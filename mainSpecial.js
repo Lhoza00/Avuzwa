@@ -19,7 +19,7 @@ class SpecialHeader extends HTMLElement {
 
                 <div class="header-actions">
 
-                    <a href="cart.html" id="cartAction"><button class="cart-btn">
+                    <a href="cart.html" id="cartAction"><button class="cart-btn" onClick="openCheckout()">
                         <span>🛒 Buy Art</span>
                         <span class="cart-count hidden" id="cartCount">0</span>
                     </button></a>
