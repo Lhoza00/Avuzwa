@@ -23,7 +23,12 @@
     <p class="sub" id="cartSubtitle">Review your chosen pieces before checkout.</p>
     <div class="cart-layout" id="cartLayout">
       <!-- injected by JS -->
-      
+      <div class="empty-cart" style="grid-column:1/-1;">
+          <div class="empty-cart-icon">🎨</div>
+          <h3>Your cart is empty</h3>
+          <p>Discover original artworks ready for their new home.</p>
+          <button class="btn-primary" onclick="showPage('shop')">Browse the Gallery →</button>
+        </div>
     </div>
   </div>
 <!-- ═══ CHECKOUT MODAL ════════════════════════════════════════════════ -->
