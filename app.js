@@ -459,5 +459,6 @@ document.addEventListener('click', e => {
     PRODUCTS.map(renderCard).join('');
 }
 
-init();
+document.getElementById("productsGrid").innerHTML =
+    PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
