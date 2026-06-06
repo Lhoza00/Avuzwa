@@ -99,15 +99,6 @@
       "badge": "original",
       "desc": "Oil on canvas — expressive rural study.",
       "image": "images/IMG-20260510-WA0008.jpg"
-    },
-    {
-      "id": 12,
-      "name": "Purple Hills (Variant)",
-      "category": "oil",
-      "price": 3800,
-      "badge": "original",
-      "desc": "Variant edition of Purple Hills series.",
-      "image": "images/IMG-20260510-WA0008.jpg"
     }
   ];
 
