@@ -527,6 +527,7 @@
       font-size: 2.2rem; color: var(--green-dark); margin-bottom: 8px;
     }
     .cart-page .sub { color: var(--text-light); margin-bottom: 40px; }
+    #subTitle{ display: flex; margin: 0 auto; flex-direction: column;}
     .cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start; }
     .cart-items { display: flex; flex-direction: column; gap: 16px; }
     .cart-item {
