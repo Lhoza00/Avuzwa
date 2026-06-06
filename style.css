@@ -521,6 +521,7 @@
     .step-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
 
     /* ─── CART PAGE ──────────────────────────────────── */
+    #cartAction{display: none;}
     .cart-page { padding: 60px 20px 100px; min-height: 70vh;}
     .cart-page h1 {
       font-family: 'Playfair Display', serif;
