@@ -101,7 +101,17 @@
       "image": "images/IMG-20260510-WA0008.jpg"
     }
   ];
+  function setCookie(name, value, days = 7) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+}
 
+function getCookie(name) {
+  return document.cookie
+    .split('; ')
+    .find(row => row.startsWith(name + '='))
+    ?.split('=')[1];
+}
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
@@ -117,7 +127,14 @@
     console.error("Fetch failed:", err);
   }
 }
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = [];
+
+try {
+  const cookie = getCookie("cart");
+  cart = cookie ? JSON.parse(decodeURIComponent(cookie)) : [];
+} catch (e) {
+  cart = [];
+}
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 document.querySelector("#hamburger")
   .addEventListener("click", toggleMobileNav);
@@ -200,7 +217,7 @@ PRODUCTS.forEach(product => {
     if (existing) {
       existing.qty = (existing.qty || 1) + 1;
     } else {
-      cart.push({ ...p, qty: 1 });
+      cart.push({ id: p.id, qty: 1 });
     }
     updateCartCount();
     saveCart();
@@ -216,8 +233,8 @@ PRODUCTS.forEach(product => {
     console.log(`[Cart] Removed item ${id}`, cart);
   }
   function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-  }
+  setCookie("cart", JSON.stringify(cart), 7); // saved for 7 days
+}
   function updateCartCount() {
     const total = cart.reduce((s, i) => s + (i.qty || 1), 0);
     const el = document.getElementById('cartCount');
@@ -459,3 +476,7 @@ document.getElementById("productsGrid").innerHTML =
     PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
   console.log(cart);
+window.addEventListener("DOMContentLoaded", () => {
+  updateCartCount();
+  renderCart(); // ✅ REQUIRED
+});
