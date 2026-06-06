@@ -117,8 +117,6 @@
     console.error("Fetch failed:", err);
   }
 }
-
-  let cart = [];
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 document.querySelector("#hamburger")
@@ -153,11 +151,7 @@ document.querySelector("#hamburger")
         </div>
       </div>`;
   }
-// ─── CART BUTTON DELEGATION ─────────────────────────────────────────
-document.addEventListener('click', e => {
-  const btn = e.target.closest('.add-cart-btn');
-  if (btn) addToCart(Number(btn.dataset.id));
-});
+
   // ─── RENDER GRIDS ───────────────────────────────────────────────────
   function renderHomeGrid() {
   const grid = document.getElementById('productsGrid');
@@ -216,6 +210,7 @@ PRODUCTS.forEach(product => {
 
   function removeFromCart(id) {
     cart = cart.filter(i => i.id !== id);
+    saveCart();
     updateCartCount();
     renderCart();
     console.log(`[Cart] Removed item ${id}`, cart);
