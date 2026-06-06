@@ -102,6 +102,8 @@
     }
   ];
 
+  console.log(PRODUCTS);
+
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
@@ -112,7 +114,7 @@
     }
 
     const data = await res.json();
-    return data.products;
+    console.log(data);
   } catch (err) {
     console.error("Fetch failed:", err);
   }
@@ -456,4 +458,6 @@ PRODUCTS.forEach(product => {
     PRODUCTS.map(renderCard).join('');
 }
 
+document.getElementById("productsGrid").innerHTML =
+    PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
