@@ -458,3 +458,4 @@ PRODUCTS.forEach(product => {
 document.getElementById("productsGrid").innerHTML =
     PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
+  console.log(cart);
