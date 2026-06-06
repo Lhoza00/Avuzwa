@@ -202,7 +202,7 @@ document.addEventListener('click', e => {
 
   // ─── CART LOGIC ─────────────────────────────────────────────────────
   async function addToCart(id) {
-    const p = await loadProducts();.find(x => x.id === id);
+    const p = await PRODUCTS.find(x => x.id === id);
     if (!p) return;
     const existing = cart.find(i => i.id === id);
     if (existing) {
@@ -462,3 +462,5 @@ document.addEventListener('click', e => {
 document.getElementById("productsGrid").innerHTML =
     PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
+
+console.log(PRODUCTS);
