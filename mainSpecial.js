@@ -37,7 +37,7 @@ class SpecialHeader extends HTMLElement {
                 <a class="nav-link active" href="index.html#heroSection">Home</a>
                 <a class="nav-link" href="index.html#about-artist">Artist</a>
                 <a class="nav-link" href="index.html#productsGrid">Shop</a>
-                <a href="cart.html class="nav-link">Cart</a>
+                <a href="cart.html" class="nav-link">Cart</a>
             </div>
         </header>
         `;
