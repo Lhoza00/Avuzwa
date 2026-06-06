@@ -102,8 +102,6 @@
     }
   ];
 
-  console.log(PRODUCTS);
-
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
