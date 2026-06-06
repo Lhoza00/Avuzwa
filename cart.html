@@ -16,7 +16,7 @@
 <!-- ═══ HEADER ═══════════════════════════════════════════════════════ -->
 <special-header></special-header>
 <!-- ═══ CART PAGE ════════════════════════════════════════════════════ -->
-<div id="cart" class="page" style="min-height: 100vh;">
+<section id="cart" class="page" style="min-height: 100vh;">
   <div class="container cart-page" >
     <h1>Your Cart</h1>
     <p class="sub" id="cartSubtitle">Review your chosen pieces before checkout.</p>
@@ -24,19 +24,19 @@
       <!-- injected by JS -->
     </div>
   </div>
-</div><!-- end cart -->
 <!-- ═══ CHECKOUT MODAL ════════════════════════════════════════════════ -->
-<div class="modal-overlay" id="checkoutModal" onclick="closeModalOutside(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <h2 class="modal-title" id="modalTitle">Checkout</h2>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div id="checkoutContent">
-      <!-- injected by JS -->
+  <div class="modal-overlay" id="checkoutModal" onclick="closeModalOutside(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Checkout</h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div id="checkoutContent">
+        <!-- injected by JS -->
+      </div>
     </div>
   </div>
-</div>
+</section>
 <!-- ═══ FOOTER ═══════════════════════════════════════════════════════ -->
 <special-footer></special-footer>
 
