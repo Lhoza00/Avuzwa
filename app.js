@@ -119,6 +119,7 @@
 }
 
   let cart = [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
   document.querySelectorAll('[id^="siteName"]').forEach(el => el.textContent = SITE_NAME);
 document.querySelector("#hamburger")
   .addEventListener("click", toggleMobileNav);
@@ -208,6 +209,7 @@ PRODUCTS.forEach(product => {
       cart.push({ ...p, qty: 1 });
     }
     updateCartCount();
+    saveCart();
     showToast(`🖼️ "${p.name}" added to cart`);
     console.log(`[Cart] Added: ${p.name}`, cart);
   }
@@ -218,7 +220,9 @@ PRODUCTS.forEach(product => {
     renderCart();
     console.log(`[Cart] Removed item ${id}`, cart);
   }
-
+  function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  }
   function updateCartCount() {
     const total = cart.reduce((s, i) => s + (i.qty || 1), 0);
     const el = document.getElementById('cartCount');
