@@ -110,6 +110,9 @@
       "image": "images/IMG-20260510-WA0008.jpg"
     }
   ];
+
+  console.log(PRODUCTS);
+
   async function loadProducts() {
   try {
     const res = await fetch('./products.json');
@@ -170,7 +173,12 @@ document.addEventListener('click', e => {
   const grid = document.getElementById('productsGrid');
   if (!grid || !PRODUCTS.length) return;
 
-  grid.innerHTML = PRODUCTS.slice(0, 6).map(renderCard).join('');
+  grid.innerHTML = '';
+    
+PRODUCTS.forEach(product => {
+    grid.innerHTML += renderCard(product);
+  });
+
 }
   function renderShopGrid(filter = 'all') {
   const grid = document.getElementById('shopGrid');
@@ -462,5 +470,3 @@ document.addEventListener('click', e => {
 document.getElementById("productsGrid").innerHTML =
     PRODUCTS.map(renderCard).join('');
   console.log(`[Init] ${SITE_NAME} website loaded`);
-
-console.log(PRODUCTS);
