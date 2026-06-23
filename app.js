@@ -163,7 +163,7 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button>
+            <a href="#hello title=${p.name}price=${p.price.toLocaleString()} "><button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button></a>
           </div>
         </div>
       </div>`;
