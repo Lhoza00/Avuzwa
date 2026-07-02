@@ -151,7 +151,7 @@ document.querySelector("#hamburger")
   function renderCard(p) {
     const badge = p.badge ? `<div class="product-badge ${p.badge === 'new' ? 'new' : ''}">${p.badge}</div>` : '';
     return `
-      <div class="product-card" data-cat="${p.category}" data-id="${p.id}">
+      <div class="product-card" data-cat="${p.category}" id="product.${p.id}">
         <div class="product-img-wrap">
           <div class="art-placeholder" style="height:100%;position:relative;">
             <img src="images/${p.id}.jpg" alt="${p.name}" style="width:100%; height:100%; object-fit:cover; display:block;" />
@@ -163,7 +163,7 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-            <a href="https://wa.me/27711809947?text=title=${p.name}price=${p.price.toLocaleString()} "><button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button></a>
+            <a href="https://wa.me/27711809947?text=https://lhoza00.github.io/Avuzwa/#product.${p.id}\n ${p.name}\n ${p.price.toLocaleString()}"><button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button></a>
           </div>
         </div>
       </div>`;
