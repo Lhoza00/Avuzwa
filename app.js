@@ -163,12 +163,28 @@ document.querySelector("#hamburger")
           <div class="product-desc">${p.desc}</div>
           <div class="product-footer">
             <span class="product-price">R ${p.price.toLocaleString()}</span>
-             <a href="https://wa.me/27711809947?text=https://lhoza00.github.io/Avuzwa/index.html#product.${p.id}\n${p.name}\n${p.price.toLocaleString()}"><button class="add-cart-btn" onclick="addToCart(${p.id})">Add to Cart</button></a>
+             <button onclick="sendWhatsApp(${p.id})">Order Now</button>
           </div>
         </div>
       </div>`;
   }
+  function sendWhatsApp(id) {
 
+    const p = PRODUCTS.find(product => product.id === id);
+
+    const message = `Hello,
+
+    I'm interested in this product.
+    
+    Product: ${p.name}
+    Price: R${p.price.toLocaleString()}
+    
+    https://lhoza00.github.io/Avuzwa/index.html#product.${p.id}`;
+    
+        const url = `https://wa.me/27711809947?text=${encodeURIComponent(message)}`;
+    
+        window.open(url, "_blank");
+    }
   // ─── RENDER GRIDS ───────────────────────────────────────────────────
   function renderHomeGrid() {
   const grid = document.getElementById('productsGrid');
