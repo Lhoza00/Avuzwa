@@ -307,13 +307,13 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.25rem; color: var(--green-dark); font-weight: 700;
     }
-    .add-cart-btn {
+    .product-footer button{
       background: var(--green-dark); color: white;
       padding: 9px 20px; border-radius: 100px;
       font-size: 0.82rem; font-weight: 500;
       transition: var(--transition);
     }
-    .add-cart-btn:hover { background: var(--purple-mid); transform: scale(1.05); }
+    .product-footer button:hover { background: var(--purple-mid); transform: scale(1.05); }
 
     /* Art canvas placeholders */
     .art-placeholder {
