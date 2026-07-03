@@ -181,7 +181,7 @@ document.querySelector("#hamburger")
     
     https://lhoza00.github.io/Avuzwa/index.html#product.${p.id}`;
     
-        const url = `https://wa.me/27711809947?text=${encodeURIComponent(message)}`;
+        const url = `https://wa.me/27689903094?text=${encodeURIComponent(message)}`;
     
         window.open(url, "_blank");
     }
